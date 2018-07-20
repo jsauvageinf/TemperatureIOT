@@ -1,0 +1,37 @@
+@import "../../../styles";
+
+.fa {
+    color: $sidenav-font-color;
+}
+
+.section {
+    color: white;
+}
+.RGC-title {
+    color: white;
+    font-size: 1.5em;
+}
+
+.RGC-title-2 {
+
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+.side-nav-active,.side-nav-active:hover {
+    position: relative;
+    background-color: $primary-color;
+}
+
+.side-nav-active:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    border-bottom: 15px solid $secondary-color;
+    border-left: 15px solid $sidenav-bg-color;
+    width: 0;
+}
+
+.nav-link {
+    font-size: 1em;
+}

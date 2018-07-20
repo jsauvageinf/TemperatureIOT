@@ -1,0 +1,80 @@
+@import "../../../styles";
+
+.animated-panel {
+    background-color: $card-bg-color;
+    border: solid 1px $card-border-color;
+    padding: 0;
+    z-index: 1 !important;
+}
+
+.animated-panel-title {
+    font-size: 0.7em;
+}
+
+.svg-inline--fa {
+    font-size: 1.5em !important;
+}
+
+.animated-panel-footer {
+    
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Flip container
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    .flip-container {
+        perspective: 1000px;
+        z-index: 2;
+        position: relative;
+    }
+        /* flip the pane when hovered
+        .flip-container:hover .flipper, .flip-container.hover .flipper {
+            transform: rotateY(180deg);
+        }*/
+        /* flip the pane when hovered*/ 
+         .flip-container.turn .flipper {
+            transform: rotateY(180deg);
+        }
+    
+    .flip-container, .front, .back {
+        width: 100%;
+        height: auto;
+        min-height:200px;
+        
+    }
+    
+    /* flip speed goes here */
+    .flipper {
+        transition: 0.8s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    
+    /* hide back of pane during swap */
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: auto;
+        background-color: $card-content-bg-color;
+        z-index: 3;
+    }
+    
+    /* front pane, placed above back */
+    .front {
+        z-index: 3;
+        /* for firefox 31 */
+        transform: rotateY(0deg);
+    }
+    
+    /* back, initially hidden pane */
+    .back {
+        z-index:2;
+        transform: rotateY(180deg);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Flip container END
+    ////////////////////////////////////////////////////////////////////////////////////////////////////

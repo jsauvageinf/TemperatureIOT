@@ -1,0 +1,30 @@
+
+
+<mz-card class="animated-panel">
+
+  <mz-card-title *ngIf="title != undefined" class="animated-panel-title">
+    {{ title }}
+    <i *ngIf="loading" class="fas fa-spinner fa-pulse right"></i>
+    <!-- size="lg" animation="pulse" class="temporal-value-spinner right" -->
+    <hr>
+  </mz-card-title>
+
+  <mz-card-content class="animated-panel-content" (click)="contentClicked()">
+    <i *ngIf="loading && title == undefined" class="fas fa-spinner fa-pulse right"></i>
+    <div class="flip-container" [class.turn]="turn">
+      <div class="flipper">
+        <div class="front">
+            <ng-content select="[front]"></ng-content>
+        </div>
+        <div class="back">
+            <ng-content select="[back]"></ng-content>
+        </div>
+      </div>
+    </div>
+  </mz-card-content>
+
+  <mz-card-action class="animated-panel-footer" style="z-index: 1; position: relative;">
+      <ng-content select="[footer]"></ng-content>
+  </mz-card-action>
+
+</mz-card>

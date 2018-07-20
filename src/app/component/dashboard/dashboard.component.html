@@ -1,0 +1,213 @@
+<div class="row">
+  <div class="col s12 m4">
+    <app-animated-panel [turn]="turn" [title]="'Cuisine'" [turnOnClick]="true">
+      <div front>
+        <div style="position: relative; margin: 10px;font-size: 5em; text-align: center;">
+          <span>25</span>
+          <span class="degres">°</span>
+          <span>C</span>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s3" style="font-size:1.3em; ">
+            <i class="fas fa-angle-up fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-equals fa-fw" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-angle-down fa-fw grey-text" ></i>
+          </div>
+        </div>
+        <div style="position: absolute; margin: 10px; bottom: 0; right:0">
+          <span style="font-size: 1em; text-align: center;">Humidité : 60%</span>
+        </div>
+      </div>
+      <div back>
+        <div style="display: block; position: relative; margin-top: 10px">
+          <canvas baseChart width="50px" height="50px" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+      </div>
+      <div footer style="z-index:10;font-size: 1.2em !important;">
+        <i class="fas fa-battery-quarter fa-fw" style="top:10px;"></i>
+        <span style="margin-left: 10px">77%</span>
+      </div>
+    </app-animated-panel>
+  </div>
+
+  <div class="col s12 m4">
+    <app-animated-panel [turn]="turn" [title]="'Salon'" [turnOnClick]="false">
+      <div front>
+        <div style="position: relative; margin: 10px;font-size: 5em; text-align: center;">
+          <span>22</span>
+          <span class="degres">°</span>
+          <span>C</span>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s3" style="font-size:1.3em; ">
+            <i class="fas fa-angle-up fa-fw green-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-equals fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-angle-down fa-fw grey-text" ></i>
+          </div>
+        </div>
+        <div style="position: absolute; margin: 10px; bottom: 0; right:0">
+          <span style="font-size: 1em; text-align: center;">Humidité : 60%</span>
+        </div>
+      </div>
+      <div back>
+        
+      </div>
+      <div footer style="z-index:10;font-size: 1.2em !important;">
+        <i class="fas fa-battery-quarter fa-fw" style="top:10px;"></i>
+        <span style="margin-left: 10px">26%</span>
+      </div>
+    </app-animated-panel>
+  </div>
+
+  <div class="col s12 m4">
+    <app-animated-panel [turn]="turn" [title]="'Salle à manger'" [turnOnClick]="false">
+      <div front>
+        <div style="position: relative; margin: 10px;font-size: 5em; text-align: center;">
+          <span>5</span>
+          <span class="degres">°</span>
+          <span>C</span>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s3" style="font-size:1.3em; ">
+            <i class="fas fa-angle-up fa-fw green-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-equals fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-angle-down fa-fw grey-text" ></i>
+          </div>
+        </div>
+        <div style="position: absolute; margin: 10px; bottom: 0; right:0">
+          <span style="font-size: 1em; text-align: center;">Humidité : 60%</span>
+        </div>
+      </div>
+      <div back>
+       
+      </div>
+      <div footer style="z-index:10;font-size: 1.2em !important;">
+        <i class="fas fa-battery-quarter fa-fw" style="top:10px;"></i>
+        <span style="margin-left: 10px">2%</span>
+      </div>
+    </app-animated-panel>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m4">
+    <app-animated-panel [turn]="turn" [title]="'Buanderie'" [turnOnClick]="false">
+      <div front>
+        <div style="position: relative; margin: 10px;font-size: 5em; text-align: center;">
+          <span>29</span>
+          <span class="degres">°</span>
+          <span>C</span>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s3" style="font-size:1.3em; ">
+            <i class="fas fa-angle-up fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-equals fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-angle-down fa-fw red-text" ></i>
+          </div>
+        </div>
+        <div style="position: absolute; margin: 10px; bottom: 0; right:0">
+          <span style="font-size: 1em; text-align: center;">Humidité : 60%</span>
+        </div>
+      </div>
+      <div back>
+        
+      </div>
+      <div footer style="z-index:10;font-size: 1.2em !important;">
+        <i class="fas fa-battery-quarter fa-fw" style="top:10px;"></i>
+        <span style="margin-left: 10px">32%</span>
+      </div>
+    </app-animated-panel>
+  </div>
+
+  <div class="col s12 m4">
+    <app-animated-panel [turn]="turn" [title]="'Chambre parent'" [turnOnClick]="false">
+      <div front>
+        <div style="position: relative; margin: 10px;font-size: 5em; text-align: center;">
+          <span>-7</span>
+          <span class="degres">°</span>
+          <span>C</span>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s3" style="font-size:1.3em; ">
+            <i class="fas fa-angle-up fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-equals fa-fw" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-angle-down fa-fw grey-text" ></i>
+          </div>
+        </div>
+        <div style="position: absolute; margin: 10px; bottom: 0; right:0">
+          <span style="font-size: 1em; text-align: center;">Humidité : 60%</span>
+        </div>
+      </div>
+      <div back>
+        
+      </div>
+      <div footer style="z-index:10;font-size: 1.2em !important;">
+        <i class="fas fa-battery-quarter fa-fw" style="top:10px;"></i>
+        <span style="margin-left: 10px">38%</span>
+      </div>
+    </app-animated-panel>
+  </div>
+
+  <div class="col s12 m4">
+    <app-animated-panel [turn]="turn" [title]="'Salle de bain'" [turnOnClick]="false">
+      <div front>
+        <div style="position: relative; margin: 10px;font-size: 5em; text-align: center;">
+          <span>26</span>
+          <span class="degres">°</span>
+          <span>C</span>
+        </div>
+        <div class="row">
+          <div class="col s2 offset-s3" style="font-size:1.3em; ">
+            <i class="fas fa-angle-up fa-fw green-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-equals fa-fw grey-text" ></i>
+          </div>
+          <div class="col s2" style="font-size:1.3em;">
+            <i class="fas fa-angle-down fa-fw grey-text" ></i>
+          </div>
+        </div>
+        <div style="position: absolute; margin: 10px; bottom: 0; right:0">
+          <span style="font-size: 1em; text-align: center;">Humidité : 60%</span>
+        </div>
+      </div>
+      <div back>
+        
+      </div>
+      <div footer style="z-index:10;">
+        <div footer style="z-index:10;font-size: 1.2em !important;">
+          <i class="fas fa-battery-quarter fa-fw" style="top:10px;"></i>
+          <span style="margin-left: 10px">90%</span>
+        </div>
+      </div>
+    </app-animated-panel>
+  </div>
+</div>
+
+
+
+
+<button (click)="turn = !turn;">Click</button>

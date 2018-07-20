@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~materialize-css/sass/components/_color.scss';
+$roboto-font-path: "~materialize-css/dist/fonts/roboto/";
+
+$primary-color: color("grey", "darken-4");
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("light-blue", "darken-1") !default;
+
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-2") !default;
+
+// Card
+$card-bg-color: $primary-color !default;
+$card-border-color: $secondary-color !default;
+$card-content-bg-color: $primary-color !default;
+
+.card .card-content {
+    padding: 10px !important;
+}
+
+// Sidenav
+$sidenav-bg-color: $primary-color-light !default;
+$sidenav-font-color: $secondary-color !default;
+
+$collection-border-color: $secondary-color !default;
+$collection-bg-color: $primary-color-light !default;
+
+body {
+    background-color: $primary-color;
+    color: white;
+}
+
+@import "~materialize-css/sass/materialize.scss";

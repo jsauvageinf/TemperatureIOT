@@ -1,0 +1,12 @@
+@import "../_variables";
+
+main {
+  
+  @media #{$large-and-up} {
+    padding-left: 300px;
+  }
+  
+  .container {
+    width: 95% !important;
+  }
+}

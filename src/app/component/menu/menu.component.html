@@ -1,0 +1,42 @@
+<mz-sidenav #sidenav
+    [id]="'sidenav'"
+    [backgroundClass]="'sidenav-background'"
+    [collapseButtonId]="'btn-sidenav'"
+    [fixed]="true" class="haut">
+
+    <mz-sidenav-header class="sidenav-header" >
+      <a [routerLink]="'home'">
+          <span class="RGC-title">Temperature</span>
+        <span class="RGC-title-2">IOT</span>
+      </a>
+      <hr>
+    </mz-sidenav-header>
+    
+    <ng-template ngFor let-groupedRoute [ngForOf]="groupedRoutes" class="waves-effect">
+<!--       <mz-sidenav-subheader>
+        <span class="section">{{ groupedRoute.section }}</span>
+      </mz-sidenav-subheader> -->
+
+      <mz-sidenav-link *ngFor="let route of groupedRoute.routes"  >
+        <a [routerLink]="route.path" routerLinkActive="side-nav-active" *ngIf="route.data" class="nav-link" style="position: relative;">
+          <!--<i mz-icon-mdi [icon]="route.data.icon" class="{{ route.data.class }} indigo-text"></i>-->
+          <i class="{{route.data.icon}}" style="font-size: 1.8em; position:absolute; width:60px; margin:auto; top:8px;"></i>
+          <span style="margin-left: 70px; color:white">
+            {{ route.data.text }}
+          </span>
+            
+        </a>
+      </mz-sidenav-link>
+    </ng-template>
+
+  </mz-sidenav>
+
+  <button mz-button
+    class="sidenav-button hide-on-large-only"
+    style="position:absolute; top:15px; right:15px; z-index:99"
+    id="btn-sidenav"
+    [float]="true"
+    [large]="true"
+    >
+    <i mz-icon-mdi [icon]="'menu'"></i>
+  </button>
