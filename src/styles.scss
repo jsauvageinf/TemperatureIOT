@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~materialize-css/sass/components/_color.scss';
 $roboto-font-path: "~materialize-css/dist/fonts/roboto/";
+@font-face {
+    font-family: "My Custom Font";
+    src: url(/assets/delius.ttf) format('truetype');
+}
 
 $primary-color: color("grey", "darken-4");
 $primary-color-light: lighten($primary-color, 15%) !default;
@@ -31,6 +35,7 @@ $collection-bg-color: $primary-color-light !default;
 body {
     background-color: $primary-color;
     color: white;
+    font-family: "My Custom Font", Verdana, Tahoma;
 }
 
 @import "~materialize-css/sass/materialize.scss";

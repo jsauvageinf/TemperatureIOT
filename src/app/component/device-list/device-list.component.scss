@@ -1,0 +1,21 @@
+@import "../../../styles";
+
+.number-of-device-container {
+    background-color: $primary-color-light !important;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.number-of-device {
+    color: $secondary-color;
+    font-size: 1.5em;
+}
+
+.device-field-name {
+    color: $secondary-color;
+}
+
+.device-pannel {
+    background-color: $card-bg-color;
+    border: solid 1px $card-border-color;
+}

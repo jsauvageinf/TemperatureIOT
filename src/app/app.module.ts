@@ -12,7 +12,8 @@ import {
   MzSidenavModule,
   MzIconModule,
   MzIconMdiModule,
-  MzCardModule
+  MzCardModule,
+  MzTooltipModule
 } from 'ngx-materialize';
 
 
@@ -41,6 +42,7 @@ import { ChartsModule } from 'ng2-charts';
     MzIconModule,
     MzIconMdiModule,
     MzCardModule,
+    MzTooltipModule,
 
     ChartsModule
   ],
