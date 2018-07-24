@@ -8,6 +8,7 @@ import { Device } from '../../model/device';
 })
 export class DeviceListComponent implements OnInit {
   public deviceList: Device[] = [];
+  public searchDeviceFilter: string = '';
 
   constructor() { }
 

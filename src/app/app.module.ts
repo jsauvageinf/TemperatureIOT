@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 
@@ -22,6 +22,7 @@ import { MenuComponent } from './component/menu/menu.component';
 import { AnimatedPanelComponent } from './component/animated-panel/animated-panel.component';
 import { DeviceListComponent } from './component/device-list/device-list.component';
 import { ChartsModule } from 'ng2-charts';
+import { SearchDevicePipe } from './pipe/search-device.pipe';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,14 @@ import { ChartsModule } from 'ng2-charts';
     DashboardComponent,
     MenuComponent,
     AnimatedPanelComponent,
-    DeviceListComponent
+    DeviceListComponent,
+    SearchDevicePipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
-    
+    FormsModule,
     MzButtonModule,
     MzInputModule,
     MzSidenavModule,

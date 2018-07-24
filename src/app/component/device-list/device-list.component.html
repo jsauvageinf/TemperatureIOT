@@ -2,7 +2,7 @@
   <div class="col s12 m4">
     <mz-input-container>
         <i mz-input-prefix class="fas fa-search fa-fw" ></i>
-      <input mz-input [label]="'Recherche'" id="search-input" placeholder="Entrez votre recherche ici ..." type="text" style="padding-left:50px">
+      <input mz-input [label]="'Recherche'" id="search-input" placeholder="Entrez votre recherche ici ..." type="text" [(ngModel)]="searchDeviceFilter" style="padding-left:50px">
     </mz-input-container>
   </div>
 
@@ -17,7 +17,7 @@
 </div>
 
 <div class="row">
-  <div class="col s12 m4" *ngFor="let dev of deviceList">
+  <div class="col s12 m6" *ngFor="let dev of deviceList | SearchDevice: searchDeviceFilter">
     <mz-card class="device-pannel">
       <mz-card-title>
         {{ dev.deviceName }}
